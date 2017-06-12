@@ -14,14 +14,9 @@ executeScript() {
 }
 
 echo "########################"
-echo "# Creating useful aliases :) #"
+echo "# Installing vpn libs #"
 echo "########################"
-alias ll='ls -alF'
-alias ltr='ls -ltr'
-alias l='ls -CF'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias grep='grep --color=auto'
+eopkg it pptp networkmanager-pptp ppp -y
 
 echo "########################"
 echo "# Installing Jdk 8u131 #"
@@ -48,28 +43,28 @@ echo "########################"
 echo "# Installing chrome #"
 echo "########################"
 eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3rd-party/master/network/web/browser/google-chrome-stable/pspec.xml
-eopkg it google-chrome-*.eopkg
+eopkg it google-chrome-*.eopkg -y
 rm -f google-chrome-*.eopkg
 
 echo "########################"
 echo "# Installing skype #"
 echo "########################"
 eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3rd-party/master/network/im/skype/pspec.xml
-eopkg it skype*.eopkg
+eopkg it skype*.eopkg -y
 rm -f *.eopkg
 
 echo "########################"
 echo "# Installing slack #"
 echo "########################"
 eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3rd-party/master/network/im/slack-desktop/pspec.xml
-eopkg it slack-desktop*.eopkg
+eopkg it slack-desktop*.eopkg -y
 rm -f slack-desktop*.eopkg
 
 echo "########################"
 echo "# Installing teamviewer #"
 echo "########################"
 eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3rd-party/master/network/util/teamviewer/pspec.xml
-eopkg it teamviewer*.eopkg
+eopkg it teamviewer*.eopkg -y
 rm -f teamviewer*.eopkg
 systemctl start teamviewerd.service
 
@@ -77,19 +72,19 @@ echo "########################"
 echo "# Installing MS core fonts #"
 echo "########################"
 eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3rd-party/master/desktop/font/mscorefonts/pspec.xml
-eopkg it mscorefonts*.eopkg
+eopkg it mscorefonts*.eopkg -y
 rm -f mscorefonts*.eopkg
 
 echo "########################"
 echo "# Installing maven #"
 echo "########################"
-eopkg it maven -y
+eopkg it apache-maven -y
 
 echo "########################"
 echo "# Installing spotify #"
 echo "########################"
 eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3rd-party/master/multimedia/music/spotify/pspec.xml
-eopkg it spotify*.eopkg
+eopkg it spotify*.eopkg -y
 rm spotify*.eopkg
 
 echo "########################"
@@ -126,5 +121,5 @@ echo "########################"
 echo "# Installing webstorm #"
 echo "########################"
 eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3rd-party/master/programming/webstorm/pspec.xml
-eopkg it webstorm*.eopkg
+eopkg it webstorm*.eopkg -y
 rm -f webstorm*.eopkg
