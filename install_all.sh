@@ -117,9 +117,3 @@ echo "# Installing gimp #"
 echo "########################"
 eopkg it gimp -y
 
-echo "########################"
-echo "# Installing webstorm #"
-echo "########################"
-eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3rd-party/master/programming/webstorm/pspec.xml
-eopkg it webstorm*.eopkg -y
-rm -f webstorm*.eopkg
