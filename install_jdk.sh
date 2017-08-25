@@ -7,7 +7,7 @@ if [ $? != 0 ]; then
     return
 else
 tar xf jdk-8u144-linux-x64.tar.gz
-    mv jdk1.8.0_144 /opt/
+    mv jdk1.8.0_144 /opt
     ln -svf /opt/jdk1.8.0_144/bin/java /usr/bin/java
     rm -f jdk-8u144-linux-x64.tar.gz
     exit 0

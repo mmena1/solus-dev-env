@@ -37,7 +37,8 @@ echo "########################"
 echo "# Installing node #"
 echo "########################"
 eopkg it nodejs -y
-npm i -g
+npm i -g yarn
+yarn global add @angular/cli@latest
 
 echo "########################"
 echo "# Installing chrome #"
